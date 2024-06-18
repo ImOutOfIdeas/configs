@@ -1,0 +1,13 @@
+autoload -U colors;  colors
+
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+zstyle ':vcs_info:git:*' unstagedstr '[-]'
+zstyle ':vcs_info:git:*' stagedstr '[+]'
+zstyle ':vcs_info:git:*' check-for-changes true 
+zstyle ':vcs_info:git:*' formats " %b%u%c "
+
+setopt PROMPT_SUBST
+#PROMPT='%~ %F{#FF4444}${vcs_info_msg_0_}%f %F{#FFF000}λ%f '
+PROMPT='%F{#BACAFF}%~%f %F{#FF6666}${vcs_info_msg_0_}%f%F{#FFAE42}λ%f '
