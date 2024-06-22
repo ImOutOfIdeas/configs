@@ -23,6 +23,12 @@ require('lazy').setup({
     "navarasu/onedark.nvim",
     "nvim-telescope/telescope.nvim",
     {
+        'barrett-ruth/live-server.nvim',
+        build = 'pnpm add -g live-server',
+        cmd = { 'LiveServerStart', 'LiveServerStop' },
+        config = true
+    },
+    {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" }
